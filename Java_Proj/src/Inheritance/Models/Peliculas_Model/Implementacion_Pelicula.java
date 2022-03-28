@@ -18,18 +18,17 @@ public class Implementacion_Pelicula implements ICatalogo_Peliculas {
     }
 
     @Override
-    public void buscar_peliculas(Peliculas nomPelicula) {
+    public void buscar_peliculas(String nomPelicula) {
         String resultado = null;
+
         for (var pelicula : this.listaPeliculas) {
-            if (pelicula.equals(nomPelicula.toString())) {
+            if (pelicula.equals(nomPelicula)) {
                 resultado = pelicula;
                 break;
-            } else {
-                resultado = pelicula;
             }
         }
         if (nomPelicula.equals(resultado)) {
-            JOptionPane.showMessageDialog(null, "El resultado " + resultado, "Bscar Pelicula", 2);
+            JOptionPane.showMessageDialog(null, "El resultado " + resultado, "Buscar Pelicula", 2);
         } else {
             JOptionPane.showMessageDialog(null, "No se encontro la pelicula " + nomPelicula, "Error", 3);
         }
@@ -42,7 +41,7 @@ public class Implementacion_Pelicula implements ICatalogo_Peliculas {
     }
 
     @Override
-    public void insertar_peliculas(String nomPelicula) {
+    public void insertar_peliculas(Peliculas nomPelicula) {
         this.listaPeliculas.add(nomPelicula.toString());
     }
 
