@@ -1,6 +1,7 @@
 package Ejercicos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Array_list {
 
@@ -15,6 +16,18 @@ public class Array_list {
         System.out.println(meses);
 
         imprimir_arraylist(meses);
+
+        //RECIBE UNA COLECCION DE OBJETOS GENERICOS 
+        List lista = new ArrayList<>();
+
+        lista.add(15);
+        lista.add(2.5);
+        lista.add("hola crayola");
+
+        System.out.println(lista);
+        for (Object object : lista) {
+
+        }
 
     }
 

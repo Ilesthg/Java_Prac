@@ -1,10 +1,10 @@
-package Inheritance.Models;
+package Inheritance.Models.FigurasModel;
 
 public class RectanguloAbs extends FigureGeoAbs {
 
     public RectanguloAbs(String tipoFigura) {
         super(tipoFigura);
-        // TODO Auto-generated constructor stub
+
     }
 
     @Override

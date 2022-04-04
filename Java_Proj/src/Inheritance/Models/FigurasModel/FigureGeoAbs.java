@@ -1,4 +1,4 @@
-package Inheritance.Models;
+package Inheritance.Models.FigurasModel;
 
 public abstract class FigureGeoAbs {
 
