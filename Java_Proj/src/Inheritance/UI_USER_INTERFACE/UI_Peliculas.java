@@ -18,6 +18,10 @@ public class UI_Peliculas {
                             + "3-Buscar pelicula\n"
                             + "4- salir",
                     "Catalogo Pelicuals", 3);
+
+            int num = 0;
+            num = Integer.parseInt(opcion);
+
             switch (opcion) {
                 case "1":
                     String nombrepelicula = JOptionPane.showInputDialog(null, "Ingrese la pelicula", "Entrada", 3);
