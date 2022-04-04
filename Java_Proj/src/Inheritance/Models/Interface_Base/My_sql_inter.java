@@ -1,4 +1,4 @@
-package Inheritance.Models;
+package Inheritance.Models.Interface_Base;
 
 public class My_sql_inter implements BaseDatos {
 
