@@ -7,17 +7,7 @@ public class Store_Sania extends Mall_Sania implements Inter_Tienda {
     protected int store_id;
     protected String name;
     protected String location;
-    protected ArrayList<Store_Sania> tien;
     protected ArrayList<Product> list_products;
-
-    public Store_Sania(int store_id, String name, String location, ArrayList<Store_Sania> tien,
-            ArrayList<Product> list_products) {
-        this.store_id = store_id;
-        this.name = name;
-        this.location = location;
-        this.tien = tien;
-        this.list_products = list_products;
-    }
 
     public Store_Sania(int store_id, String name, String location) {
         this.store_id = store_id;
@@ -40,24 +30,14 @@ public class Store_Sania extends Mall_Sania implements Inter_Tienda {
         list_products.add(producto);
     }
 
-    protected static void inserte_Locacion(String loc) {
-        String n1 = "Firt Floor";
-        String n2 = "Second Floor";
-        String n3 = "Third floor";
-
-        if (loc.equalsIgnoreCase(n1))
-            System.out.println("");
-        else if (loc.equalsIgnoreCase(n2))
-            System.out.println("");
-        else if (loc.equalsIgnoreCase(n3))
-            System.out.println("");
-        else
-            System.out.println("Locacion No admitida");
-
+    @Override
+    public String toString() {
+        return "Store_Sania [Tostring tienda=" + list_products + ", location=" + location + ", name=" + name
+                + ", store_id=" + store_id + "]";
     }
 
-    public String MostrarTienda() {
-        return "Mostrar Tienda =" + list_products + ", location=" + location + ", name=" + name
+    public String Mostrar() {
+        return "Desde Mostrar Store [Tostring tienda=" + list_products + ", location=" + location + ", name=" + name
                 + ", store_id=" + store_id + "]";
     }
 
@@ -100,12 +80,6 @@ public class Store_Sania extends Mall_Sania implements Inter_Tienda {
     @Override
     public void setList_products(ArrayList<Product> list_products) {
         this.list_products = list_products;
-    }
-
-    @Override
-    public String toString() {
-        return "Store_Sania [list_products=" + list_products + ", location=" + location + ", name=" + name
-                + ", store_id=" + store_id + "]";
     }
 
 }

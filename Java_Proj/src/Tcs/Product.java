@@ -10,15 +10,6 @@ public class Product extends Store_Sania implements Inter_Product {
     protected int quantity;
     protected int price;
 
-    //--
-    public Product() {
-
-    }
-
-    public Product(int store_id, String name, String location) {
-        super(store_id, name, location);
-    }
-
     public Product(int store_id, String name, String location, ArrayList<Product> list_products, int product_id,
             String name2, String type, int quantity, int price) {
         super(store_id, name, location, list_products);
@@ -39,12 +30,9 @@ public class Product extends Store_Sania implements Inter_Product {
         this.price = price;
     }
 
-    public Product(int product_id, String name2, String type, int quantity, int price) {
-        this.product_id = product_id;
-        this.name2 = name2;
-        this.type = type;
-        this.quantity = quantity;
-        this.price = price;
+    //--
+    public Product() {
+
     }
 
     public int getProduct_id() {
@@ -88,8 +76,14 @@ public class Product extends Store_Sania implements Inter_Product {
     }
 
     @Override
-    public String MostrarTienda() {
-        return super.MostrarTienda();
+    public String Mostrar() {
+        return super.Mostrar();
+    }
+
+    public String MostrarPro() {
+        return "DESDE Product [name2=" + name2 + ", price=" + price + ", product_id=" + product_id + ", quantity="
+                + quantity
+                + ", type=" + type + "]";
     }
 
 }

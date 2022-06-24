@@ -12,14 +12,14 @@ public class Main {
         ArrayList<Product> list_products = new ArrayList();
         ArrayList<Store_Sania> tiendas = new ArrayList<>();
 
-        Store_Sania st1 = new Store_Sania();
+        Store_Sania st1 = new Store_Sania(1, "name", "location", list_products);
 
-        Store_Sania st2 = new Store_Sania();
+        Store_Sania st2 = new Store_Sania(2, "name2", "Third FLoor", list_products);
 
         Product p1 = new Product();
-        p1.setStore_id(1);
-        p1.setName("Fabrica 1");
-        p1.setLocation("Third Floor");
+        // p1.setStore_id(1);
+        //p1.setName("Fabrica 1");
+        // p1.setLocation("Third Floor");
         p1.setProduct_id(1);
         p1.setName2("producto1");
         p1.setType("p1");
@@ -27,9 +27,9 @@ public class Main {
         p1.setPrice(111);
 
         Product p2 = new Product();
-        p2.setStore_id(2);
-        p2.setName("La fabrica de Willy");
-        p2.setLocation("Second Floor");
+        //p2.setStore_id(2);
+        // p2.setName("La fabrica de Willy");
+        //p2.setLocation("Second Floor");
         p2.setProduct_id(2);
         p2.setName2("producto 2");
         p2.setType("p2");
@@ -37,9 +37,9 @@ public class Main {
         p2.setPrice(228);
 
         Product p3 = new Product();
-        p3.setStore_id(3);
-        p3.setName("La fabrica de asdasd");
-        p3.setLocation("First Floor");
+        //  p3.setStore_id(3);
+        // p3.setName("La fabrica de asdasd");
+        //p3.setLocation("First Floor");
         p3.setProduct_id(3);
         p3.setName2("producto3");
         p3.setType("pr3");
@@ -61,10 +61,13 @@ public class Main {
         tiendas.add(st1);
         tiendas.add(st2);
 
+        for (Store_Sania iterable_element : tiendas) {
+            System.out.println(iterable_element.getLocation());
+        }
+
         //CREAR TIENDA CON NOMBRE, LOCACION Y ID
         // Agregar_P(list_products);
-        // Buscar_Producto(list_products);
-        System.out.println(st1.getLocation());
+        //Buscar_Producto(list_products);
         /*
           
              for (int i = 0; i < list_products.size(); i++) {
