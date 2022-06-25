@@ -2,12 +2,16 @@ package Tcs;
 
 import java.util.ArrayList;
 
-public class Store_Sania extends Mall_Sania implements Inter_Tienda {
+public abstract class Store_Sania extends Mall_Sania implements Inter_Tienda {
 
     protected int store_id;
     protected String name;
     protected String location;
     protected ArrayList<Product> list_products;
+
+    public Store_Sania(ArrayList<Product> list_products) {
+        this.list_products = list_products;
+    }
 
     public Store_Sania(int store_id, String name, String location) {
         this.store_id = store_id;
@@ -30,10 +34,9 @@ public class Store_Sania extends Mall_Sania implements Inter_Tienda {
         list_products.add(producto);
     }
 
-    @Override
-    public String toString() {
-        return "Store_Sania [Tostring tienda=" + list_products + ", location=" + location + ", name=" + name
-                + ", store_id=" + store_id + "]";
+    public int sumaProdi() {
+        return list_products.stream().mapToInt(l -> l.getPrice()).sum();
+
     }
 
     public String Mostrar() {
@@ -80,6 +83,25 @@ public class Store_Sania extends Mall_Sania implements Inter_Tienda {
     @Override
     public void setList_products(ArrayList<Product> list_products) {
         this.list_products = list_products;
+    }
+
+    public String SinArray() {
+        return "Store_Sania [location=" + location + ", name=" + name + ", store_id=" + store_id + "]";
+    }
+
+    public String PuroArray() {
+        return "Store list_products=" + list_products;
+    }
+
+    public String Store() {
+        return "Store_Sania [list_products=" + list_products + ", location=" + location + ", name=" + name
+                + ", store_id=" + store_id + "]";
+    }
+
+    @Override
+    public String toString() {
+        return "Store_Sania [list_products=" + list_products + ", location=" + location + ", name=" + name
+                + ", store_id=" + store_id + "]";
     }
 
 }

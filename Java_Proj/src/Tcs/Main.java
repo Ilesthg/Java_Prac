@@ -5,16 +5,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static int index = 1;
 
     public static void main(String[] args) {
 
         ArrayList<Product> list_products = new ArrayList();
         ArrayList<Store_Sania> tiendas = new ArrayList<>();
 
-        Store_Sania st1 = new Store_Sania(1, "name", "location", list_products);
+        Store_Sania st1 = new Product();
+        st1.setStore_id(1);
+        st1.setName("FABRICA 1");
+        st1.setLocation("location");
 
-        Store_Sania st2 = new Store_Sania(2, "name2", "Third FLoor", list_products);
+        Store_Sania st2 = new Product();
+        st2.setStore_id(2);
+        st2.setName("FABRICA 2");
+        st2.setLocation("location2");
 
         Product p1 = new Product();
         // p1.setStore_id(1);
@@ -46,28 +51,61 @@ public class Main {
         p3.setQuantity(3);
         p3.setPrice(3);
 
+        Product p4 = new Product();
+        //  p3.setStore_id(3);
+        // p3.setName("La fabrica de asdasd");
+        //p3.setLocation("First Floor");
+        p4.setProduct_id(4);
+        p4.setName2("producto4");
+        p4.setType("pr4");
+        p4.setQuantity(4);
+        p4.setPrice(4);
+
+        Product p5 = new Product();
+        //  p3.setStore_id(3);
+        // p3.setName("La fabrica de asdasd");
+        //p3.setLocation("First Floor");
+        p4.setProduct_id(5);
+        p4.setName2("producto5");
+        p4.setType("pr5");
+        p4.setQuantity(5);
+        p4.setPrice(5);
         //metodo para añadir productos a la tienda
         st1.añadirProducto(p1);
         st1.añadirProducto(p2);
+        st1.añadirProducto(p3);
 
         st2.añadirProducto(p3);
+        st2.añadirProducto(p1);
+        st2.añadirProducto(p4);
+        st2.añadirProducto(p5);
 
         //ARRAY DE LISTA DE PRODUCTOS
         list_products.add(p1);
         list_products.add(p2);
         list_products.add(p3);
+        list_products.add(p4);
+        list_products.add(p5);
 
         //ARRAY DE TIENDAS
         tiendas.add(st1);
         tiendas.add(st2);
 
-        for (Store_Sania iterable_element : tiendas) {
-            System.out.println(iterable_element.getLocation());
+        for (int i = 0; i < tiendas.size(); i++) {
+            System.out.println(tiendas.get(i).list_products);
+            System.out.println(tiendas.get(i).sumaProdi());
         }
 
+        int suma = 0;
+
+        for (Product a : list_products) {
+            suma += a.getPrice();
+        }
+        System.out.println("suma de" + suma);
+
         //CREAR TIENDA CON NOMBRE, LOCACION Y ID
-        // Agregar_P(list_products);
-        //Buscar_Producto(list_products);
+        //Agregar_P(list_products);
+        Buscar_Producto(list_products);
         /*
           
              for (int i = 0; i < list_products.size(); i++) {

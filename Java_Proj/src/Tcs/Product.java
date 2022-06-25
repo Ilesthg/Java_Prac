@@ -10,6 +10,9 @@ public class Product extends Store_Sania implements Inter_Product {
     protected int quantity;
     protected int price;
 
+    protected Store_Sania st1;
+    protected Store_Sania st2;
+
     public Product(int store_id, String name, String location, ArrayList<Product> list_products, int product_id,
             String name2, String type, int quantity, int price) {
         super(store_id, name, location, list_products);
@@ -80,10 +83,15 @@ public class Product extends Store_Sania implements Inter_Product {
         return super.Mostrar();
     }
 
-    public String MostrarPro() {
-        return "DESDE Product [name2=" + name2 + ", price=" + price + ", product_id=" + product_id + ", quantity="
-                + quantity
-                + ", type=" + type + "]";
+    public String SoloPrecio() {
+        int si = 0;
+        si += price;
+        return "Product " + si;
+    }
+
+    @Override
+    public String toString() {
+        return "Product  " + price;
     }
 
 }
