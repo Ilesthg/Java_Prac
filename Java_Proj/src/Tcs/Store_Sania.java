@@ -36,6 +36,33 @@ public abstract class Store_Sania extends Mall_Sania implements Inter_Tienda {
 
     public int sumaProdi() {
         return list_products.stream().mapToInt(l -> l.getPrice()).sum();
+    }
+
+    /*
+    //MANERA DE SACAR PRODUCTOS CON LAMBDA 
+     public void productosN() {
+        list_products.stream()
+                .map(pro -> pro.getName2())
+                .forEach(System.out::println);
+    }*/
+
+    public void productosNombres() {
+        list_products.forEach(p -> {
+            System.out.println("Producto : " + p.getName2() + " y su precio es: " + p.getPrice());
+        });
+
+    }
+
+    public void buscarProducto(String producto) {
+
+        list_products.forEach(per -> {
+            if (per.getName2().equalsIgnoreCase(producto)) {
+                System.out.println("Se encontro el producto en la tienda: " + getName());
+                System.out.println("El id de la tienda es : " + getStore_id());
+                System.out.println("La localizacion de la tienda es : " + getLocation());
+
+            }
+        });
 
     }
 

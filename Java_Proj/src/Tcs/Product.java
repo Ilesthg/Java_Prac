@@ -1,6 +1,7 @@
 package Tcs;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Product extends Store_Sania implements Inter_Product {
 
@@ -9,9 +10,6 @@ public class Product extends Store_Sania implements Inter_Product {
     protected String type;
     protected int quantity;
     protected int price;
-
-    protected Store_Sania st1;
-    protected Store_Sania st2;
 
     public Product(int store_id, String name, String location, ArrayList<Product> list_products, int product_id,
             String name2, String type, int quantity, int price) {
@@ -84,14 +82,17 @@ public class Product extends Store_Sania implements Inter_Product {
     }
 
     public String SoloPrecio() {
-        int si = 0;
-        si += price;
-        return "Product " + si;
+
+        return "Product Precio " + price;
     }
 
     @Override
     public String toString() {
-        return "Product  " + price;
+        return "\nProduct Nombre : " + name2 +
+                "\nPrecio : " + price +
+                "\nProducto iD: " + product_id +
+                "\nCantidad : " + quantity
+                + "\nTipo : " + type;
     }
 
 }

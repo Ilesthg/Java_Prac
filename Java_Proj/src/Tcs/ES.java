@@ -1,71 +1,20 @@
 package Tcs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class ES {
 
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        Scanner leerInt = new Scanner(System.in);
-
-        leer.useDelimiter("\n");
-        inserte_Locacion("First Floor");
-
-        System.out.println("INTRODUZCA EL ID DE LA NUEVA TIENDA :");
-        int store_id = leerInt.nextInt();
-        System.out.println(store_id);
-
-        System.out.println("Nombre:");
-        String nombre_de_la_tienda = leer.next();
-        System.out.println(nombre_de_la_tienda);
-
-        System.out.println("Locacion:");
-        String location = leer.next();
-        System.out.println(location);
-
-        String n1 = "First Floor";
-        String n2 = "Second Floor";
-        String n3 = "Third floor";
-
-        boolean l_existe = false;
-
-        while (l_existe == false) {
-
-            if (location.equalsIgnoreCase(n1)) {
-                System.out.println("");
-                l_existe = true;
-                break;
-            } else if (location.equalsIgnoreCase(n2)) {
-                System.out.println("");
-                l_existe = true;
-                break;
-            }
-            if (location.equalsIgnoreCase(n3)) {
-                System.out.println("");
-                l_existe = true;
-                break;
-            } else {
-                System.out.println("Locacion No admitida");
-                break;
-            }
-
-        }
-    }
-
-    public static void inserte_Locacion(String loc) {
-        String n1 = "First Floor";
-        String n2 = "Second Floor";
-        String n3 = "Third floor";
-
-        if (loc.equalsIgnoreCase(n1))
-            System.out.println("Se agreco correctamente");
-        else if (loc.equalsIgnoreCase(n2))
-            System.out.println("Se agreco correctamente");
-        else if (loc.equalsIgnoreCase(n3))
-            System.out.println("Se agreco correctamente");
-        else
-            System.out.println("Locacion No admitida");
-
+        Libro l = new Libro("El señor de los anillos", "fantasia", 1100);
+        Libro l2 = new Libro("El Juego de Ender", "ciencia ficcion", 500);
+        Libro l3 = new Libro("La fundacion", "ciencia ficcion", 500);
+        Libro l4 = new Libro("Los pilares de la tierra", "historica", 1200);
+        List<Libro> lista = Arrays.asList(l, l2, l3, l4);
+        lista.stream()
+                .map(ll -> ll.getNombre())
+                .forEach(System.out::println);
     }
 }
