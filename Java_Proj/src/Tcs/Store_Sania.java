@@ -2,7 +2,7 @@ package Tcs;
 
 import java.util.ArrayList;
 
-public abstract class Store_Sania extends Mall_Sania implements Inter_Tienda {
+public class Store_Sania extends Mall_Sania implements Inter_Tienda {
 
     protected int store_id;
     protected String name;
@@ -50,7 +50,14 @@ public abstract class Store_Sania extends Mall_Sania implements Inter_Tienda {
         list_products.forEach(p -> {
             System.out.println("Producto : " + p.getName2() + " y su precio es: " + p.getPrice());
         });
+    }
 
+    public String nombre2() {
+        String busqueda = null;
+        for (Product a : list_products) {
+            busqueda = a.getName2();
+        }
+        return busqueda;
     }
 
     public void buscarProducto(String producto) {
@@ -60,8 +67,21 @@ public abstract class Store_Sania extends Mall_Sania implements Inter_Tienda {
                 System.out.println("Se encontro el producto en la tienda: " + getName());
                 System.out.println("El id de la tienda es : " + getStore_id());
                 System.out.println("La localizacion de la tienda es : " + getLocation());
+                System.out.println("El precio del Producto es : " + per.getPrice());
+            }
+        });
+    }
+
+    public void buscarProdPrecio(String producto) {
+
+        list_products.forEach(per -> {
+            if (per.getName2().equalsIgnoreCase(producto)) {
+
+                System.out.println("Se encontro el producto en la tienda: " + getName());
+                System.out.println("El precio del Producto es : " + per.getPrice());
 
             }
+
         });
 
     }
