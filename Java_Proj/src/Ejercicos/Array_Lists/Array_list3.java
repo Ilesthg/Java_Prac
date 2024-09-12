@@ -1,4 +1,4 @@
-package Ejercicos.Array_Lists;
+package Java_Proj.src.Ejercicos.Array_Lists;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

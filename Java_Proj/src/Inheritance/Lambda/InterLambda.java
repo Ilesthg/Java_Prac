@@ -1,4 +1,4 @@
-package Inheritance.Lambda;
+package Java_Proj.src.Inheritance.Lambda;
 
 //@FunctionalInterface
 public interface InterLambda {

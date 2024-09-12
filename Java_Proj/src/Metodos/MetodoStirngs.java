@@ -1,4 +1,4 @@
-package Metodos;
+package Java_Proj.src.Metodos;
 
 public class MetodoStirngs {
 

@@ -1,4 +1,4 @@
-package TCS2;
+package Java_Proj.src.TCS2;
 
 public interface Interface_Product {
     public int getProduct_id();

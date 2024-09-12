@@ -1,4 +1,4 @@
-package GenericClases.BoxGenericClass;
+package Java_Proj.src.GenericClases.BoxGenericClass;
 
 public class Book implements Boxable {
     private final String name;

@@ -1,4 +1,4 @@
-package Archivos;
+package Java_Proj.src.Archivos;
 
 import java.io.*;
 

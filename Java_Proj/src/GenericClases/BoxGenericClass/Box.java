@@ -1,4 +1,4 @@
-package GenericClases.BoxGenericClass;
+package Java_Proj.src.GenericClases.BoxGenericClass;
 
 import java.util.ArrayList;
 import java.util.List;

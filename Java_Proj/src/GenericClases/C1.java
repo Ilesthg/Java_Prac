@@ -1,4 +1,4 @@
-package GenericClases;
+package Java_Proj.src.GenericClases;
 
 import java.util.ArrayList;
 import java.util.List;

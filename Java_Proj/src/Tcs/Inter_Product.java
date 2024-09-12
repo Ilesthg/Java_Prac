@@ -1,4 +1,4 @@
-package Tcs;
+package Java_Proj.src.Tcs;
 
 public interface Inter_Product {
     public int getProduct_id();
