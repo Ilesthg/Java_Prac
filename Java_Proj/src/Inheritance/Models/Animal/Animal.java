@@ -1,4 +1,4 @@
-package Inheritance.Models.Animal;
+package Java_Proj.src.Inheritance.Models.Animal;
 
 public class Animal {
     private String name;

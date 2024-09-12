@@ -1,6 +1,7 @@
-package Inheritance.Test;
+package Java_Proj.src.Inheritance.Test;
 
-import Inheritance.Models.Animal.*;
+import Java_Proj.src.Inherit.Models.Animal.Cat;
+import Java_Proj.src.Inherit.Models.Animal.Animal;
 
 public class TestHerenciaAnimal {
 

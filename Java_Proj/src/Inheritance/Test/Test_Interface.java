@@ -1,4 +1,4 @@
-package Inheritance.Test;
+package Java_Proj.src.Inheritance.Test;
 
 import Inheritance.Models.Interface_Base.BaseDatos;
 import Inheritance.Models.Interface_Base.My_sql_inter;

@@ -4,7 +4,7 @@ package Java_Proj.src.Metodos;
 public class a {
 
     public static void main(String[] args) {
-        MetodoStirngs.metodoStrings("a", "b");
+        Metodos.MetodoStirngs.metodoStrings("a", "b");
 
         int matriz1[][] = new int[3][2];
 

@@ -1,4 +1,4 @@
-package Ejercicos;
+package Java_Proj.src.Ejercicos;
 
 public class Suma_numeros_con_arg_infinitos {
 
